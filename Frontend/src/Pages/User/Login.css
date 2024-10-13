@@ -1,0 +1,72 @@
+.login-container {
+    max-width: 400px; /* Max width for the login box */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    border: 1px solid #ccc; /* Light border around the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #2d3748; /* Dark background color */
+    color: white; /* Text color to ensure visibility against the dark background */
+}
+
+.login-title {
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 1.5rem; /* Font size for the title */
+    font-weight: bold; /* Bold title text */
+}
+
+.error-message {
+    color: #f56565; /* Color for error messages */
+    text-align: center; /* Center align error messages */
+    margin-top: 1rem; /* Space above the error message */
+}
+
+.input-group {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px; /* Space between inputs */
+}
+
+.input-field {
+    padding: 10px; /* Padding for input fields */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border for inputs */
+    background-color: #4a5568; /* Dark background for input */
+    color: white; /* White text for input */
+}
+
+.input-field::placeholder {
+    color: #a0aec0; /* Light color for placeholder text */
+}
+
+.button-container {
+    margin-top: 1.5rem; /* Space above the button */
+}
+
+.login-button {
+    padding: 10px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    border: none; /* Remove default border */
+    background-color: #007bff; /* Blue background for button */
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.signup-link {
+    text-align: center; /* Center align the signup link */
+    margin-top: 20px; /* Space above the link */
+}
+
+.signup-text {
+    color: #007bff; /* Blue color for the link */
+    text-decoration: none; /* No underline */
+}
+
+.signup-text:hover {
+    text-decoration: underline; /* Underline on hover for link effect */
+}

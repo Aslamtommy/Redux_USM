@@ -1,0 +1,93 @@
+/* Home.css */
+
+/* Main container for the user profile page */
+.user-profile-container {
+    max-width: 400px; /* Max width for the profile box */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    background-color: #2d3748; /* Dark background color for the profile card */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    color: #ffffff; /* Text color */
+}
+
+/* Profile picture section */
+.profile-picture-container {
+    display: flex;
+    justify-content: center; /* Center the image */
+    margin-bottom: 1rem; /* Margin below the image */
+}
+
+/* Style for the profile image */
+.user-profile-picture {
+    width: 6rem; /* Fixed width for the profile picture */
+    height: 6rem; /* Fixed height for the profile picture */
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    border: 2px solid #60a5fa; /* Light blue border around the image */
+}
+
+/* Style for the no image placeholder */
+.user-no-image {
+    width: 6rem; /* Fixed width for the placeholder */
+    height: 6rem; /* Fixed height for the placeholder */
+    border-radius: 50%; /* Makes the placeholder circular */
+    background-color: #4a5568; /* Gray background color */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    color: #a0aec0; /* Light gray text color */
+    margin-bottom: 1rem; /* Margin below the placeholder */
+}
+
+/* Greeting text style */
+.user-greeting {
+    font-size: 1.5rem; /* Larger font size for the greeting */
+    font-weight: bold; /* Bold text */
+    color: #60a5fa; /* Light blue color */
+    margin-bottom: 1.5rem; /* Margin below the greeting */
+}
+
+/* User details section */
+.user-details {
+    margin-bottom: 1rem; /* Margin below the details section */
+}
+
+/* User detail paragraphs */
+.user-details p {
+    color: #e2e8f0; /* Light gray text color */
+    margin: 0.25rem 0; /* Margin for each paragraph */
+}
+
+/* Logout button container */
+.logout-button-container {
+    display: flex;
+    justify-content: center; /* Center the button */
+}
+
+/* Style for the logout button */
+.user-logout-button {
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    background-color: #3b82f6; /* Blue background color */
+    border-radius: 0.375rem; /* Rounded corners */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for hover */
+    color: #ffffff; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline */
+}
+
+/* Hover effect for the logout button */
+.user-logout-button:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+}
+
+/* Focus effect for the logout button */
+.user-logout-button:focus {
+    box-shadow: 0 0 0 2px #3b82f6; /* Blue outline on focus */
+}
+
+/* Style for user not found message */
+.user-not-found {
+    color: #a0aec0; /* Light gray text color */
+}

@@ -1,0 +1,89 @@
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc; /* Light border around the container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background-color: #2d3748; /* Dark background color */
+  color: white; /* Text color to ensure visibility against the dark background */
+}
+
+.signup-header {
+  text-align: center; /* Center align the header */
+  margin-bottom: 20px; /* Space below the header */
+  font-size: 1.5rem; /* Font size for the header */
+  font-weight: bold; /* Bold header text */
+}
+
+.preview-container {
+  text-align: center; /* Center align the preview container */
+  margin-bottom: 20px; /* Space below the preview */
+}
+
+.preview-img {
+  width: 100px; /* Image width */
+  height: 100px; /* Image height */
+  border-radius: 50%; /* Circle shape for image */
+  object-fit: cover; /* Cover the area */
+}
+
+.preview-placeholder {
+  width: 100px; /* Placeholder width */
+  height: 100px; /* Placeholder height */
+  border-radius: 50%; /* Circle shape */
+  background-color: #f0f0f0; /* Light gray background for placeholder */
+  display: inline-block; /* Inline block for spacing */
+}
+
+.signup-form {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack inputs vertically */
+  gap: 10px; /* Space between inputs */
+}
+
+.signup-input,
+.signup-file {
+  padding: 10px; /* Padding for input fields */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border for inputs */
+  background-color: #4a5568; /* Dark background for input */
+  color: white; /* White text for input */
+}
+
+.signup-input::placeholder {
+  color: #a0aec0; /* Light color for placeholder text */
+}
+
+.signup-button {
+  padding: 10px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  border: none; /* Remove default border */
+  background-color: #007bff; /* Blue background for button */
+  color: white; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.signup-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.signup-link {
+  text-align: center; /* Center align the signup link */
+  margin-top: 20px; /* Space above the link */
+}
+
+.signup-link a {
+  color: #007bff; /* Blue color for link */
+  text-decoration: none; /* No underline */
+}
+
+.signup-link a:hover {
+  text-decoration: underline; /* Underline on hover for link effect */
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
