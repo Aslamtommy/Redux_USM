@@ -1,17 +1,28 @@
 import { configureStore } from '@reduxjs/toolkit';
 import userReducer from './userSlice';
-// Import other reducers as needed
+import adminReducer from './adminSlice';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
+const persistConfig = {
+    key: 'root',
+    storage,
+};
+
+const persistedUserReducer = persistReducer(persistConfig, userReducer);
+const persistedAdminReducer = persistReducer(persistConfig, adminReducer);
 
 const store = configureStore({
     reducer: {
-        user: userReducer,
-        // Add more reducers here if needed
+        user: persistedUserReducer,
+        admin: persistedAdminReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
-            serializableCheck: false, // Disable if you need to handle non-serializable data
+            serializableCheck: false,
         }),
-  
 });
 
-export { store };
+const persistor = persistStore(store);
+
+export { store, persistor };

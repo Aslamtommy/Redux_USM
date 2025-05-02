@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchUserData, logout } from "../../Redux/userSlice";
-import './Home.css'; // Import the CSS file here
-
-// Utility function to check if a token is expired
-const isTokenExpired = (token) => {
-    if (!token) return true;
-    const payload = JSON.parse(atob(token.split(".")[1]));
-    return payload.exp * 1000 < Date.now(); // Compare expiration time with current time
-};
+import EditProfile from "./EditProfile";
+import './Home.css';
+import './EditProfile.css'
 
 const UserProfile = () => {
     const dispatch = useDispatch();
@@ -18,14 +13,13 @@ const UserProfile = () => {
 
     const user = useSelector((state) => state.user.user);
     const loading = useSelector((state) => state.user.loading);
-    
+    const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
         console.log("Checking token...");
-        if (!token || isTokenExpired(token)) {
+        if (!token) {
             console.log("Token is missing or expired. Logging out and navigating to login.");
-            dispatch(logout());
-            navigate("/"); // Navigate to login if no token or token is expired
+            navigate("/"); 
             return;
         }
 
@@ -35,13 +29,19 @@ const UserProfile = () => {
         if (userId) {
             dispatch(fetchUserData(userId));
         }
-    }, [token]);
-
-   
+    }, [token, dispatch, navigate]);
 
     const handleLogout = () => {
         dispatch(logout());
-        navigate("/"); // Navigate to login after logout
+        navigate("/"); 
+    };
+
+    const handleEditProfile = () => {
+        setIsEditing(true);
+    };
+
+    const handleCloseEdit = () => {
+        setIsEditing(false);
     };
 
     return (
@@ -54,9 +54,7 @@ const UserProfile = () => {
                         <div className="profile-picture-container">
                             {user.user.profilePicture ? (
                                 <img
-                                    src={user.user.profilePicture.startsWith("http") 
-                                        ? user.user.profilePicture 
-                                        : `http://localhost:3000${user.user.profilePicture}`}
+                                    src={`http://localhost:3000${user.user.profilePicture}`}
                                     alt="Profile"
                                     className="user-profile-picture"
                                 />
@@ -71,7 +69,10 @@ const UserProfile = () => {
                             <p>Email: {user.user.email || "Not provided"}</p>
                             <p>Phone: {user.user.phone || "Not provided"}</p>
                         </div>
-                        <div className="logout-button-container">
+                        <div className="action-buttons-container">
+                            <button className="edit-profile-button" onClick={handleEditProfile}>
+                                Edit Profile
+                            </button>
                             <button className="user-logout-button" onClick={handleLogout}>
                                 Logout
                             </button>
@@ -81,6 +82,15 @@ const UserProfile = () => {
                     <p className="user-not-found">User not found</p>
                 )}
             </div>
+            {isEditing && (
+    <>
+        <div className="modal-overlay" onClick={handleCloseEdit}></div>
+        <div className="edit-profile-modal">
+            <EditProfile user={user.user} onClose={handleCloseEdit} />
+        </div>
+    </>
+)}
+
         </div>
     );
 };

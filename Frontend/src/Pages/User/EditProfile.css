@@ -1,0 +1,111 @@
+.edit-profile-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.edit-profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.edit-profile-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-profile-container input[type="text"],
+.edit-profile-container input[type="email"],
+.edit-profile-container input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.edit-profile-container input[type="text"]:focus,
+.edit-profile-container input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.edit-profile-container input[type="file"] {
+    border: none;
+    background-color: transparent;
+}
+
+.profile-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.edit-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.edit-buttons-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-buttons-container button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-buttons-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.edit-buttons-container button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+.edit-buttons-container button[type="button"]:hover {
+    background-color: #999;
+}
+.edit-profile-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.error-message {
+    color: #dc3545; /* Bootstrap danger color for error messages */
+    margin-bottom: 15px; /* Space between the message and the form */
+    font-weight: bold; /* Make the message stand out */
+}

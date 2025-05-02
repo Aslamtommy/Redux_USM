@@ -1,0 +1,131 @@
+/* AdminDashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7; /* Light background for a subtle touch */
+    margin: 0;
+    padding: 0;
+}
+
+.admin-dashboard {
+    padding: 20px;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.admin-details {
+    background-color: #3498db; /* Blue background for admin details */
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.users-list {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.users-list h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.no-users {
+    text-align: center;
+    color: #7f8c8d;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.users-table thead tr {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.users-table th,
+.users-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.users-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.users-table tbody tr:hover {
+    background-color: #d3e4f0; /* Light hover effect */
+}
+
+.user-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #2980b9;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.loading,
+.error-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-top: 20px;
+}
+.admin-profile-pic-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.admin-profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd; /* Optional: Adds a subtle border around the picture */
+    padding: 5px; /* Optional: Adds some space around the image inside the border */
+}
+
+.no-image {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
